@@ -7,8 +7,6 @@ import createCache from '@emotion/cache';
 import TodoList from './Components/TodoList';
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState } from 'react'
-import { v4 as uuidv4 } from "uuid";
-
 import { TodosContext } from './Context/TodosContext';
 
 
@@ -41,11 +39,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div dir="rtl" style={{ backgroundColor: "#191b1f", minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          {/*  <Routes>
-            <Route path="/" element={<TodoList />} />
-            <Route path="/completedTodos" element={<CompletedTodos />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>*/}
           <TodosContext.Provider value={{ todos, setTodos }} >
             <TodoList />
           </TodosContext.Provider>
