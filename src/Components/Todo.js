@@ -57,7 +57,7 @@ export default function Todo({ todo }) {
     };
     const handleDeleteConfirm = () => {
         const updatedTodos = todos.filter((t) => {
-            if (t.id == todo.id) {
+            if (t.id === todo.id) {
                 return false;
             } else {
                 return true;

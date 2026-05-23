@@ -50,9 +50,9 @@ export default function TodoList() {
 
     let todosToBeRender = todos;
 
-    if (displayedTodoType == "completed") {
+    if (displayedTodoType === "completed") {
         todosToBeRender = compltedTodos;
-    } else if (displayedTodoType == "non-completed") {
+    } else if (displayedTodoType === "non-completed") {
         todosToBeRender = nonCompltedTodos;
     } else {
         todosToBeRender = todos;
